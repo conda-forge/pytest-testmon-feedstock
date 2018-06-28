@@ -14,14 +14,16 @@ This is a py.test plug-in which automatically selects and re-executes only tests
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pytest-testmon-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pytest-testmon-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pytest-testmon-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pytest-testmon-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pytest-testmon-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pytest-testmon-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pytest-testmon-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pytest-testmon-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pytest-testmon-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pytest-testmon-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pytest-testmon-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pytest-testmon-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytest-testmon/badges/version.svg)](https://anaconda.org/conda-forge/pytest-testmon)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytest-testmon/badges/downloads.svg)](https://anaconda.org/conda-forge/pytest-testmon)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pytest--testmon-green.svg)](https://anaconda.org/conda-forge/pytest-testmon) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytest-testmon.svg)](https://anaconda.org/conda-forge/pytest-testmon) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytest-testmon.svg)](https://anaconda.org/conda-forge/pytest-testmon) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytest-testmon.svg)](https://anaconda.org/conda-forge/pytest-testmon) |
 
 Installing pytest-testmon
 =========================
