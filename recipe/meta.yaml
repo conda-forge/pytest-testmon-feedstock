@@ -1,8 +1,8 @@
 {% set name = "pytest-testmon" %}
-{% set version = "0.9.14" %}
+{% set version = "0.9.15" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "47fb5d4faa16bf431afbf404029167c18703ffa673d83b13a354186385f25246" %}
+{% set hash_value = "3d0e859bfaf66e1ea77fa35b82462717c6849107bc14447ad674ebf8d011e126" %}
 
 package:
   name: '{{ name|lower }}'
