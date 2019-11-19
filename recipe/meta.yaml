@@ -1,8 +1,8 @@
 {% set name = "pytest-testmon" %}
-{% set version = "0.9.18" %}
+{% set version = "1.0.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "05648f9b22aeeda9d32e61b46fa78c9ff28f217d69005b3b19ffb75d5992187e" %}
+{% set hash_value = "4cbf98642388b2020b3ea5ede2124a2573399e9bc864ffcb74505266d6aad389" %}
 
 package:
   name: '{{ name|lower }}'
@@ -16,7 +16,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
