@@ -1,22 +1,19 @@
 {% set name = "pytest-testmon" %}
-{% set version = "0.9.18" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "05648f9b22aeeda9d32e61b46fa78c9ff28f217d69005b3b19ffb75d5992187e" %}
+{% set version = "1.1.0" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  '{{ hash_type }}': '{{ hash_value }}'
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f88a53d28f89836509732e9dee611d66c61f5b8217201bb822a0456f2c323d19
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -33,14 +30,14 @@ test:
     - testmon
 
 about:
-  home: 'https://github.com/tarpas/pytest-testmon/'
+  home: https://github.com/tarpas/pytest-testmon/
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: When re-running a test suite, skip re-running of tests if code affecting those tests has not changed.
-  description: "This is a py.test plug-in which automatically selects and re-executes only tests affected by recent changes."
-  doc_url: 'https://pypi.python.org/pypi/pytest-testmon'
-  dev_url: 'https://github.com/tarpas/pytest-testmon/'
+  description: This is a py.test plug-in which automatically selects and re-executes only tests affected by recent changes.
+  doc_url: https://pypi.python.org/pypi/pytest-testmon
+  dev_url: https://github.com/tarpas/pytest-testmon/
 
 extra:
   recipe-maintainers:
