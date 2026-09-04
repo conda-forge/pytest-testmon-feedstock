@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  version: "2.2.0"
+
+package:
+  name: pytest-testmon
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/p/pytest-testmon/pytest_testmon-${{ version }}.tar.gz
+  sha256: 01f488e955ed0e0049777bee598bf1f647dd524e06f544c31a24e68f8d775a51
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+    - wheel
+  run:
+    - python >=${{ python_min }}
+    - pytest >=5,<10
+    - coverage >=6,<8
+
+tests:
+  - python:
+      imports:
+        - testmon
+        - testmon.pytest_testmon
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - pytest 9.*
+    script:
+      - pytest --help | grep -F -- "--testmon-noselect"
+
+about:
+  homepage: https://github.com/tarpas/pytest-testmon/
+  license: MIT
+  license_file: LICENSE
+  summary: Select tests affected by changed files and methods
+  description: pytest-testmon selects and runs tests affected by recent changes.
+  documentation: https://www.testmon.org/
+  repository: https://github.com/tarpas/pytest-testmon/
+
+extra:
+  recipe-maintainers:
+    - notestaff
