@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.3.0"
+  version: "2.3.1"
 
 package:
   name: pytest-testmon
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pytest-testmon/pytest_testmon-${{ version }}.tar.gz
-  sha256: 7bcd50afce305393edc6b530ee77a61c91949efafe0c54f799f12fe3da999623
+  sha256: d6056e00bbb80aa2438241bb7b2d37f8e3b7826c2e503cb447d93d31c9e5a9e1
 
 build:
   number: 0
